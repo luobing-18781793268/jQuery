@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.12.3.js" ></script>
+	</head>
+	<body>
+		<!-- index -->
+	<div id="n1">
+	    <div id="n2">
+	        <span id="n3"></span>
+	        <ul id="n4">
+	        	<div>aaa</div>
+	        	<div>aaa</div>
+	        	<div>aaa</div>
+	            <li id="n5">item1</li>
+	            <li id="n6">item2</li>
+	            <li id="n7">item3</li>
+	        </ul>
+	        <span id="n8"></span>
+	    </div>  
+	</div>
+	<ul> 
+		<li id="foo">foo</li> 
+		<li id="bar">bar</li> 
+		<li id="baz">baz</li> 
+	</ul> 
+    <script>
+    	// index搜索匹配的元素，并返回匹配元素在指定搜索范围的索引值，从0开始计数。
+	// 省略参数，那么返回值就是这个jQuery对象集合中第一个元素相对于其同辈元素的位置。
+    // 如果参数是一个选择器，那么返回值就是原先元素相对于选择器匹配元素中的位置。如果找不到匹配的元素，则返回-1。 具体请参考示例。 
+    // 如果参数是一组DOM元素或者jQuery对象，那么返回值就是传递的元素相对于原先集合的位置。
+
+
+    // 省略参数： 返回第一个li元素在所有同辈元素兄弟节点中的索引
+//     console.log($("li").index());// 3
+    
+// 如果参数是一个选择器，那么返回值就是原先元素相对于选择器匹配元素中的位置。
+// 如果找不到匹配的元素，则返回-1。 $(a).index(b) 在匹配的b集合找a
+    // console.log($("#n8").index("li"));// -1
+    // console.log($("#n8").index("span"));//1
+	
+    // 参数为DOM元素或jquery对象：$(a).index(b) 在匹配的a集合找b
+    // console.log($("li").index($("#n7").get(0))); // 2
+	// console.log($("li").index($("#n7"))); // 2
+
+    console.log($("li").index());
+    console.log($("#n8").index("li"));
+    console.log($("#n8").index("span"));
+    console.log($("li").index($("#n7").get(0)));
+    </script>
+	</body>
+</html>

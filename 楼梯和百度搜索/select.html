@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.12.3.js" ></script>
+	</head>
+	<body>
+ 		<div class="unSelect" onselectstart="return false;" unselectable="on">
+		选择我试试，你会发现怎么也选择不到我，哈哈哈哈
+	    </div>
+	    <script>
+	    .unSelect {
+			-webkit-user-select: none; //-webkit-对应 Safari and Chrome
+			-moz-user-select: none; //-moz-对应 Firefox
+			-ms-user-select: none; //-ms- for Internet Explorer
+			-o-user-select: none; //-o- for Opera
+			user-select: none;
+		}
+		</script>
+	</body>
+</html>
